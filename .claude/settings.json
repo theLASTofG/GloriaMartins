@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\famil\\\\Downloads\\\\gloria-martins-v2 \\(2\\)\\\\gloria-martins-v2\\\\gloria-v2\\\\images\" -File | Sort-Object LastWriteTime -Descending | Select-Object -First 12 -Property Name, @{N='Date';E={$_.LastWriteTime.ToString\\('yyyy-MM-dd HH:mm'\\)}} | Format-Table -AutoSize)"
+    ]
+  }
+}
