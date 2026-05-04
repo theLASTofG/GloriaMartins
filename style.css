@@ -1378,6 +1378,17 @@ font[class^="goog-"] { color: inherit !important; background: none !important; }
 .bg-warm  { background: var(--warm); }
 .bg-white { background: #fff; }
 
+/* ── Mobile polish ───────────────────────────────────────── */
+@media (max-width: 600px) {
+  .info-card { padding: 22px 18px; }
+  .section   { padding: 52px 0; }
+  .section--sm { padding: 28px 0; }
+  .container { padding: 0 18px; }
+  .page-hero__title { font-size: 2rem; }
+  .page-hero__sub   { font-size: 15px; }
+  .btn { font-size: 13px; padding: 13px 22px; }
+}
+
 /* ── Floating Social Buttons ─────────────────────────────── */
 .float-social {
   position: fixed;

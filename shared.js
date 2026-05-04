@@ -149,7 +149,7 @@ const FOOTER_HTML = `
         <p class="footer__col-title" data-i18n="nav_contact">Contact</p>
         <div class="footer__links" style="gap:8px;">
           <span style="font-size:13px;color:rgba(255,255,255,.55);">North Lakes, QLD<br>Brisbane, Australia 4509</span>
-          <a href="mailto:info@gloriamartins.com">info@gloriamartins.com</a>
+          <a href="mailto:perfectconnectiongm@yahoo.com">perfectconnectiongm@yahoo.com</a>
           <a href="${WA_URL_FULL}" target="_blank" rel="noopener noreferrer"
              style="font-size:13px;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:6px;">
             <svg width="14" height="14" viewBox="0 0 32 32" fill="#25D366"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.47 2.025 7.773L.057 31.943l8.297-2.175A15.93 15.93 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm7.27 19.383c-.394-.198-2.333-1.151-2.694-1.281-.362-.132-.624-.198-.888.198-.263.396-1.02 1.281-1.249 1.547-.23.264-.46.298-.854.099-.394-.198-1.664-.614-3.172-1.961-1.173-1.048-1.964-2.34-2.196-2.736-.23-.396-.024-.61.173-.806.178-.178.395-.462.593-.693.198-.231.263-.396.395-.66.131-.264.065-.495-.034-.693-.099-.198-.888-2.145-1.217-2.937-.32-.772-.645-.667-.888-.679l-.756-.013c-.263 0-.692.099-1.055.495-.362.396-1.382 1.35-1.382 3.293 0 1.944 1.415 3.822 1.613 4.086.199.264 2.784 4.253 6.748 5.962.944.407 1.68.65 2.252.832.947.302 1.808.259 2.488.157.758-.113 2.333-.954 2.663-1.876.329-.922.329-1.713.23-1.877-.099-.165-.362-.264-.756-.462z"/></svg>

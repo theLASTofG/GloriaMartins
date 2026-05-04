@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gloriamartins.com/sitemap.xml
+
+# Block specific AI training crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
