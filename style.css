@@ -371,12 +371,7 @@ h1, h2, h3, h4 {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    105deg,
-    rgba(30,20,30,0.68) 0%,
-    rgba(30,20,30,0.35) 55%,
-    rgba(30,20,30,0.05) 100%
-  );
+  background: none;
 }
 
 .hero__content {
@@ -426,6 +421,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 600px) {
   .hero { min-height: 85vh; padding-bottom: 56px; }
+  .hero__bg { background-position: top center; }
   .hero__content { padding: 0 20px; }
   .hero__title { font-size: clamp(2.2rem, 10vw, 2.95rem); }
   .hero__desc { font-size: 13px; max-width: 100%; }
