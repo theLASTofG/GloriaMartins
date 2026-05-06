@@ -3,28 +3,28 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://gloriamartins.com/</loc>
+    <loc>https://gloria-martins.com/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://gloriamartins.com/about.html</loc>
+    <loc>https://gloria-martins.com/about.html</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://gloriamartins.com/services.html</loc>
+    <loc>https://gloria-martins.com/services.html</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://gloriamartins.com/contact.html</loc>
+    <loc>https://gloria-martins.com/contact.html</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

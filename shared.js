@@ -4,7 +4,7 @@
    ============================================================ */
 
 const BOOK_URL = "https://app.squareup.com/appointments/buyer/widget/3fq53objbtzxe5/WM6SYV1E49FC3";
-const LOGO_URL = "https://gloriamartins.com/wp-content/uploads/2023/05/1000073558-removebg-preview.png";
+const LOGO_URL = "images/1000073558-removebg-preview.png";
 const LANG_STORAGE_KEY = "gm_lang";
 const FLAG_EN = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg";
 const FLAG_PT = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/br.svg";

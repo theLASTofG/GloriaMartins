@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gloriamartins.com/sitemap.xml
+Sitemap: https://gloria-martins.com/sitemap.xml
 
 # Block specific AI training crawlers
 User-agent: GPTBot
