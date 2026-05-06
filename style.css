@@ -751,6 +751,53 @@ h1, h2, h3, h4 {
   }
 }
 
+/* ---------- SPEC TABS (Women & Couples) ---------- */
+.spec-support {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.spec-tabs__nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.spec-tabs__btn {
+  padding: 11px 28px;
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 2px solid var(--pink);
+  background: transparent;
+  color: var(--pink);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.spec-tabs__btn.active,
+.spec-tabs__btn:hover {
+  background: var(--pink);
+  color: #fff;
+}
+
+.spec-tabs__panel {
+  display: none;
+}
+
+.spec-tabs__panel.active {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .spec-tabs__btn { width: 100%; text-align: center; }
+}
+
 /* ---------- HOME SERVICES SNAPSHOT ---------- */
 .home-services__head {
   text-align: center;

@@ -7,7 +7,9 @@
       "Bash(ConvertTo-Json)",
       "Read(//c/Program Files/Google/Chrome/Application/**)",
       "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application/**)",
-      "Read(//c/Program Files/Microsoft/Edge/Application/**)"
+      "Read(//c/Program Files/Microsoft/Edge/Application/**)",
+      "Bash(ls \"c:\\\\Users\\\\famil\\\\Downloads\\\\gloria-martins-v2 \\(2\\)\\\\gloria-martins-v2\\\\gloria-v2\\\\\" | grep -i \"CNAME\\\\|robots\\\\|sitemap\")",
+      "Read(//c/Users/famil/Downloads/gloria-martins-v2 \\(2\\)/gloria-martins-v2/**)"
     ]
   }
 }

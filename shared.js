@@ -526,6 +526,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Home services modal popup
   initServiceModal();
 
+  // Specialised support tabs (Women & Couples)
+  document.querySelectorAll('.spec-tabs__btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.closest('.spec-tabs');
+      group.querySelectorAll('.spec-tabs__btn').forEach(b => b.classList.remove('active'));
+      group.querySelectorAll('.spec-tabs__panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = group.querySelector('#tab-' + btn.dataset.tab);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
   // Navbar scroll shadow
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').style.boxShadow =
