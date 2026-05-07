@@ -52,9 +52,6 @@ const NAV_HTML = `
           <img src="${FLAG_ES}" alt="Spanish" loading="lazy" decoding="async" />
         </button>
       </div>
-      <a href="index.html" class="navbar__logo">
-        <img src="${LOGO_URL}" alt="Gloria Martins – Perfect Connection" loading="eager" decoding="async" fetchpriority="high" />
-      </a>
     </div>
     <ul class="navbar__links">
       <li><a href="index.html"    data-page="home" data-i18n="nav_home">Home</a></li>
