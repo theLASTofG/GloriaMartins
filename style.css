@@ -508,19 +508,26 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 600px) {
-  .hero__credential { font-size: 0.85rem; white-space: normal; padding: 0 16px; bottom: 20px; }
-}
-
-@media (max-width: 600px) {
-  .hero { min-height: 85vh; padding: 28px 0 56px; }
+  .hero { min-height: 85vh; padding: 28px 0 40px; }
   .hero__bg { background-position: top center; }
   .hero__content { padding: 0 0 0 20px; max-width: 100%; }
   .hero__eyebrow { font-size: 13px; letter-spacing: 0.12em; }
   .hero__title { font-size: clamp(2.4rem, 10vw, 3.2rem); }
   .hero__sub { font-size: 1.3rem; }
   .hero__desc { font-size: 1.05rem; max-width: 100%; }
-  .btn { width: 100%; text-align: center; }
+  .hero .btn--pink { width: auto; display: inline-block; }
   .hero__logo img { height: 120px; }
+  .hero__credential {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    text-align: left;
+    padding: 0 20px;
+    font-size: 0.82rem;
+    white-space: normal;
+    line-height: 1.5;
+  }
 }
 
 /* ---------- PAGE HERO (inner pages) ---------- */
