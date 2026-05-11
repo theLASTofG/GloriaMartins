@@ -6,6 +6,7 @@
 const BOOK_URL = "https://app.squareup.com/appointments/buyer/widget/3fq53objbtzxe5/WM6SYV1E49FC3";
 const LOGO_URL = "images/gloria_martins_logo_superior_sem_fundo.png";
 const LANG_STORAGE_KEY = "gm_lang";
+const FLAG_AU = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/au.svg";
 const FLAG_EN = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/us.svg";
 const FLAG_PT = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/br.svg";
 const FLAG_ES = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ar.svg";
@@ -42,6 +43,9 @@ const NAV_HTML = `
   <div class="navbar__inner">
     <div class="navbar__left">
       <div class="lang-switch" aria-label="Language selector">
+        <button class="lang-switch__btn" data-lang="en" aria-label="Australian English">
+          <img src="${FLAG_AU}" alt="Australia" loading="lazy" decoding="async" />
+        </button>
         <button class="lang-switch__btn" data-lang="en" aria-label="English">
           <img src="${FLAG_EN}" alt="English" loading="lazy" decoding="async" />
         </button>
@@ -69,6 +73,9 @@ const NAV_HTML = `
 <div id="google_translate_element" style="display:none;position:absolute;visibility:hidden;width:0;height:0;overflow:hidden;" aria-hidden="true"></div>
 <div class="mobile-menu" id="mobile-menu">
   <div class="lang-switch lang-switch--mobile" aria-label="Language selector">
+    <button class="lang-switch__btn" data-lang="en" aria-label="Australian English">
+      <img src="${FLAG_AU}" alt="Australia" loading="lazy" decoding="async" />
+    </button>
     <button class="lang-switch__btn" data-lang="en" aria-label="English">
       <img src="${FLAG_EN}" alt="English" loading="lazy" decoding="async" />
     </button>
