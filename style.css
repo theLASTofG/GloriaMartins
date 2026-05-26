@@ -1734,86 +1734,56 @@ font[class^="goog-"] { color: inherit !important; background: none !important; }
 }
 
 /* ── Rainbow shimmer button ── */
-.btn-rainbow {
-  position: relative;
+
+/* Wrapper: the animated rainbow gradient IS the "border" */
+.btn-rainbow-wrap {
   display: inline-block;
+  padding: 3px;
+  border-radius: 4px;
+  background: linear-gradient(90deg,
+    #ff6b6b, #ffa94d, #ffd93d, #6bcb77,
+    #4d96ff, #c77dff, #ff6b6b);
+  background-size: 250% 100%;
+  animation: rainbow-slide 3s linear infinite;
+  box-shadow:
+    0 0 18px rgba(199,125,255,0.5),
+    0 0 38px rgba(77,150,255,0.3),
+    0 6px 24px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-rainbow-wrap:hover {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow:
+    0 0 32px rgba(255,107,107,0.7),
+    0 0 64px rgba(77,150,255,0.55),
+    0 14px 36px rgba(0,0,0,0.5);
+}
+
+/* Inner button: dark background + white text */
+.btn-rainbow {
+  display: block;
+  background: #130920;
+  color: #fff !important;
   font-family: var(--font-sans);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #fff;
   padding: 18px 52px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  text-decoration: none;
-  overflow: hidden;
   border-radius: 2px;
-  /* rainbow gradient border via outline layer */
-  background: linear-gradient(90deg,
-    #ff6b6b, #ffd93d, #6bcb77, #4d96ff,
-    #c77dff, #ff6b6b);
-  background-size: 300% 100%;
-  animation: rainbow-slide 3s linear infinite;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow:
-    0 0 16px rgba(255,107,107,0.45),
-    0 0 32px rgba(77,150,255,0.25);
-}
-
-/* Inner dark layer so text is readable over the rainbow */
-.btn-rainbow::before {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  background: rgba(18, 8, 26, 0.82);
-  border-radius: 1px;
+  text-decoration: none;
+  white-space: nowrap;
   transition: background 0.3s ease;
-  z-index: 0;
 }
-
-/* Text sits above the dark layer */
-.btn-rainbow span,
-.btn-rainbow {
-  position: relative;
-  z-index: 1;
-}
-
-/* Pulsing glow halo */
-.btn-rainbow::after {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: 4px;
-  background: inherit;
-  background-size: 300% 100%;
-  animation: rainbow-slide 3s linear infinite;
-  filter: blur(14px);
-  opacity: 0.55;
-  z-index: -1;
-  transition: opacity 0.3s ease;
-}
-
 .btn-rainbow:hover {
-  transform: translateY(-4px) scale(1.04);
-  box-shadow:
-    0 0 28px rgba(255,107,107,0.65),
-    0 0 56px rgba(77,150,255,0.4),
-    0 12px 32px rgba(0,0,0,0.35);
-}
-.btn-rainbow:hover::before {
-  background: rgba(18, 8, 26, 0.65);
-}
-.btn-rainbow:hover::after {
-  opacity: 0.85;
+  background: #1e0e32;
 }
 
 @keyframes rainbow-slide {
-  0%   { background-position: 0%   50%; }
-  100% { background-position: 300% 50%; }
+  0%   { background-position:   0% 50%; }
+  100% { background-position: 250% 50%; }
 }
 
 @media (max-width: 600px) {
-  .btn-rainbow { padding: 16px 36px; font-size: 11px; letter-spacing: 0.16em; }
+  .btn-rainbow { padding: 16px 32px; font-size: 11px; letter-spacing: 0.16em; }
 }
