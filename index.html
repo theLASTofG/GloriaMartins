@@ -600,20 +600,54 @@
 </section>
 
 <!-- ── LEAVE A REVIEW CTA ─────────────────────────────────── -->
-<section class=”review-cta-strip”>
-  <div class=”container” style=”text-align:center;”>
-    <p class=”eyebrow” style=”color:rgba(255,255,255,0.5);”>Your voice matters</p>
-    <h2 class=”review-cta-strip__title”>Did we make a difference in your life?</h2>
-    <p class=”review-cta-strip__sub” style=”margin:0 auto 36px;”>
-      Your honest words help other women, couples, and families find the support they need.<br>
+<style>
+  @keyframes rb-border { 0%{background-position:0% 50%} 100%{background-position:300% 50%} }
+  @keyframes rb-glow   { 0%,100%{opacity:.55} 50%{opacity:.85} }
+  .rb-wrap {
+    display:inline-block;
+    padding:3px;
+    border-radius:4px;
+    background:linear-gradient(90deg,#ff6b6b,#ffa94d,#ffd93d,#6bcb77,#4d96ff,#c77dff,#ff6b6b);
+    background-size:300% 100%;
+    animation:rb-border 3s linear infinite;
+    box-shadow:0 0 20px rgba(199,125,255,.55),0 0 44px rgba(77,150,255,.35),0 8px 28px rgba(0,0,0,.5);
+    transition:transform .3s ease,box-shadow .3s ease;
+  }
+  .rb-wrap:hover {
+    transform:translateY(-5px) scale(1.04);
+    box-shadow:0 0 36px rgba(255,107,107,.75),0 0 72px rgba(77,150,255,.6),0 16px 40px rgba(0,0,0,.55);
+  }
+  .rb-btn {
+    display:block;
+    background:#130920;
+    color:#fff !important;
+    font-family:'Jost',system-ui,sans-serif;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    padding:19px 56px;
+    border-radius:2px;
+    text-decoration:none;
+    white-space:nowrap;
+    transition:background .3s ease;
+  }
+  .rb-btn:hover { background:#1f0f38; }
+</style>
+<section style=”background:linear-gradient(135deg,#4a3850 0%,#2d1f3a 60%,#160d22 100%);padding:72px 0;text-align:center;”>
+  <div class=”container”>
+    <p style=”font-family:'Jost',system-ui,sans-serif;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:14px;”>Your voice matters</p>
+    <h2 style=”font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.8rem,3vw,2.7rem);font-weight:400;color:#fff;margin-bottom:14px;line-height:1.2;”>Did we make a difference in your life?</h2>
+    <p style=”font-size:15px;color:rgba(255,255,255,.5);line-height:1.8;max-width:500px;margin:0 auto 36px;”>
+      Your honest words help other women, couples and families find the support they need.<br>
       It only takes 2 minutes — and it means the world. ❤
     </p>
-    <div class=”btn-rainbow-wrap”>
+    <div class=”rb-wrap”>
       <a href=”https://g.page/r/CZRyilogJSLMEAI/review”
          target=”_blank” rel=”noopener noreferrer”
-         class=”btn-rainbow”
+         class=”rb-btn”
          aria-label=”Write a Google Review for Gloria Martins”>
-        ★ &nbsp;Leave a Review on Google&nbsp; ★
+        ★&nbsp;&nbsp;Leave a Review on Google&nbsp;&nbsp;★
       </a>
     </div>
   </div>
