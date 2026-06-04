@@ -7,7 +7,8 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { overflow-x: hidden; }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
@@ -610,6 +611,9 @@ h1, h2, h3, h4 {
   100% { background-position: 300% center; }
 }
 
+@media (max-width: 900px) {
+  .hero__credential { white-space: normal; padding: 0 24px; font-size: 1rem; }
+}
 @media (max-width: 600px) {
   .hero { min-height: 85vh; padding: 28px 0 48px; }
   .hero__bg { background-position: top center; }
