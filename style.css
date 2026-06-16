@@ -1094,6 +1094,13 @@ h1, h2, h3, h4 {
   padding: 5px 10px;
   margin-bottom: 14px;
 }
+.home-service-card__tag--new {
+  background: linear-gradient(90deg,#ff6b6b,#ffa94d,#ffd93d,#6bcb77,#4d96ff,#c77dff,#ff6b6b);
+  background-size: 300% 100%;
+  animation: rb-border 3s linear infinite;
+  color: #fff;
+  border-radius: 20px;
+}
 
 .home-service-card__title {
   font-family: var(--font-serif);
