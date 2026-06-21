@@ -651,6 +651,21 @@ h1, h2, h3, h4 {
   z-index: 2;
   color: #fff;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-hero__logo {
+  height: 110px;
+  width: auto;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.45));
+  animation: gm-float 7s ease-in-out infinite;
+}
+
+@media (max-width: 600px) {
+  .page-hero__logo { height: 80px; margin-bottom: 12px; }
 }
 
 .page-hero__title {
