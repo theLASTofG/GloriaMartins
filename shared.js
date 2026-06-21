@@ -548,15 +548,26 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.08)' : '';
   });
 
-  // Clean reveal animation for key titles/subtitles
-  const revealTargets = document.querySelectorAll(
-    '.hero__title, .hero__sub, .hero__desc, .section-title, .eyebrow, .cta-banner__title, .cta-banner__sub'
-  );
-  revealTargets.forEach(el => el.classList.add('reveal-up'));
+  // --- Scroll reveal: core elements ---
+  const CORE_REVEAL = '.hero__title, .hero__sub, .hero__desc, .section-title, .eyebrow, .cta-banner__title, .cta-banner__sub, .lead, .quote-signature__photo';
+  const CARD_REVEAL = '.home-service-card, .service-card, .testimonial-card, .benefit-box, .info-card';
+
+  document.querySelectorAll(CORE_REVEAL).forEach(el => el.classList.add('reveal-up'));
+
+  // Cards: reveal with stagger based on sibling position
+  document.querySelectorAll(CARD_REVEAL).forEach(card => {
+    card.classList.add('reveal-up');
+    const siblings = Array.from(card.parentElement.children).filter(c => c.matches(CARD_REVEAL));
+    const idx = siblings.indexOf(card);
+    if (idx >= 1 && idx <= 6) card.classList.add(`reveal-up--d${idx}`);
+  });
+
+  // Dividers grow left-to-right
+  document.querySelectorAll('.divider').forEach(d => d.classList.add('divider--animated'));
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduceMotion || !('IntersectionObserver' in window)) {
-    revealTargets.forEach(el => el.classList.add('is-visible'));
+    document.querySelectorAll('.reveal-up, .divider--animated').forEach(el => el.classList.add('is-visible'));
     return;
   }
 
@@ -569,9 +580,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, {
     root: null,
-    threshold: 0.14,
-    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.1,
+    rootMargin: '0px 0px -32px 0px',
   });
 
-  revealTargets.forEach(el => revealObserver.observe(el));
+  document.querySelectorAll('.reveal-up, .divider--animated').forEach(el => revealObserver.observe(el));
+
+  // --- Hero parallax (subtle background drift on scroll) ---
+  const heroBg = document.querySelector('.hero__bg');
+  if (heroBg) {
+    let rafPending = false;
+    window.addEventListener('scroll', () => {
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(() => {
+        heroBg.style.transform = `translateY(${window.scrollY * 0.26}px)`;
+        rafPending = false;
+      });
+    }, { passive: true });
+  }
 });

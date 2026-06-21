@@ -1390,18 +1390,46 @@ h1, h2, h3, h4 {
 /* ---------- Reveal animations ---------- */
 .reveal-up {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
+  transform: translateY(20px);
+  transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 .reveal-up.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Stagger delays for grouped cards */
+.reveal-up--d1 { transition-delay: 0.09s; }
+.reveal-up--d2 { transition-delay: 0.18s; }
+.reveal-up--d3 { transition-delay: 0.27s; }
+.reveal-up--d4 { transition-delay: 0.36s; }
+.reveal-up--d5 { transition-delay: 0.45s; }
+.reveal-up--d6 { transition-delay: 0.54s; }
+
+/* Divider grows left → right */
+.divider--animated {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.22s;
+}
+.divider--animated.is-visible {
+  transform: scaleX(1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal-up {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+  .reveal-up--d1, .reveal-up--d2, .reveal-up--d3,
+  .reveal-up--d4, .reveal-up--d5, .reveal-up--d6 {
+    transition-delay: 0s;
+  }
+  .divider--animated {
+    transform: scaleX(1);
     transition: none;
   }
 }
@@ -1790,4 +1818,69 @@ font[class^="goog-"] { color: inherit !important; background: none !important; }
 
 @media (max-width: 600px) {
   .btn-rainbow { padding: 16px 32px; font-size: 11px; letter-spacing: 0.16em; }
+}
+
+/* ============================================================
+   FLUID ANIMATIONS
+   ============================================================ */
+
+/* --- Hero logo: gentle float --- */
+@keyframes gm-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-11px); }
+}
+.hero__logo img {
+  animation: gm-float 7s ease-in-out infinite;
+}
+
+/* --- Hero "Book Now": soft glow pulse --- */
+@keyframes gm-btn-pulse {
+  0%, 100% { box-shadow: 0 6px 20px rgba(200,113,139,0.35); }
+  50%       { box-shadow: 0 6px 30px rgba(200,113,139,0.62), 0 0 0 7px rgba(200,113,139,0.09); }
+}
+.hero__content .btn--pink {
+  animation: gm-btn-pulse 3.5s ease-in-out infinite;
+}
+
+/* --- Page-hero (inner pages): entrance --- */
+@keyframes gm-hero-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-hero__title {
+  animation: gm-hero-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+.page-hero__sub {
+  animation: gm-hero-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both;
+}
+
+/* --- Hero bg: parallax hint (JS drives translateY) --- */
+.hero__bg {
+  will-change: transform;
+}
+
+/* --- Service card image: smoother zoom --- */
+.service-card__img img {
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.service-card:hover .service-card__img img {
+  transform: scale(1.06);
+}
+
+/* --- Home service card: slightly enhanced hover lift --- */
+.home-service-card {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.35s ease;
+}
+
+/* --- Reduced motion: disable all new animations --- */
+@media (prefers-reduced-motion: reduce) {
+  .hero__logo img,
+  .hero__content .btn--pink,
+  .page-hero__title,
+  .page-hero__sub {
+    animation: none !important;
+  }
+  .hero__bg { will-change: auto; }
 }
