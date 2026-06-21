@@ -713,23 +713,6 @@ h1, h2, h3, h4 {
   padding: 4px 12px;
 }
 
-@keyframes rb-border { 0%{background-position:0% 50%} 100%{background-position:300% 50%} }
-.badge--new {
-  position: absolute;
-  top: 12px; right: 12px;
-  background: linear-gradient(90deg,#ff6b6b,#ffa94d,#ffd93d,#6bcb77,#4d96ff,#c77dff,#ff6b6b);
-  background-size: 300% 100%;
-  animation: rb-border 3s linear infinite;
-  color: #fff;
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 20px;
-  z-index: 3;
-  box-shadow: 0 2px 8px rgba(0,0,0,.22);
-}
 
 .service-card__body {
   padding: 22px 24px 26px;
@@ -1094,14 +1077,6 @@ h1, h2, h3, h4 {
   padding: 5px 10px;
   margin-bottom: 14px;
 }
-.home-service-card__tag--new {
-  background: linear-gradient(90deg,#ff6b6b,#ffa94d,#ffd93d,#6bcb77,#4d96ff,#c77dff,#ff6b6b);
-  background-size: 300% 100%;
-  animation: rb-border 3s linear infinite;
-  color: #fff;
-  border-radius: 20px;
-}
-
 .home-service-card__title {
   font-family: var(--font-serif);
   font-size: 1.45rem;
