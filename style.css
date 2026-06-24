@@ -483,7 +483,6 @@ h1, h2, h3, h4 {
 @media (max-width: 900px) {
   .navbar__links, .navbar__cta { display: none !important; }
   .hamburger { display: flex; }
-  .navbar__logo img { height: 52px; }
   .navbar__inner { padding: 0 20px; }
   .navbar__left { gap: 10px; }
   .lang-switch { margin: 0; }
@@ -527,7 +526,6 @@ h1, h2, h3, h4 {
   width: auto;
   filter: drop-shadow(0 8px 32px rgba(0,0,0,0.45));
 }
-
 .hero__content {
   position: relative;
   z-index: 2;
