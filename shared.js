@@ -61,6 +61,7 @@ const NAV_HTML = `
       <li><a href="index.html"    data-page="home" data-i18n="nav_home">Home</a></li>
       <li><a href="about.html"    data-page="about" data-i18n="nav_about">About Me</a></li>
       <li><a href="services.html" data-page="services" data-i18n="nav_services">Services</a></li>
+      <li><a href="services.html#hypnotherapy" data-i18n="nav_hypnotherapy">Hypnotherapy</a></li>
       <li><a href="contact.html"  data-page="contact" data-i18n="nav_contact">Contact</a></li>
     </ul>
     <a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer"
@@ -89,6 +90,7 @@ const NAV_HTML = `
   <a href="index.html"    data-page="home" data-i18n="nav_home">Home</a>
   <a href="about.html"    data-page="about" data-i18n="nav_about">About Me</a>
   <a href="services.html" data-page="services" data-i18n="nav_services">Services</a>
+  <a href="services.html#hypnotherapy" data-i18n="nav_hypnotherapy">Hypnotherapy</a>
   <a href="contact.html"  data-page="contact" data-i18n="nav_contact">Contact</a>
   <a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer"
      class="btn btn--pink mobile-cta" style="margin-top:20px;text-align:center;" data-i18n="cta_schedule">
@@ -202,6 +204,7 @@ const I18N = {
     nav_home: "Home",
     nav_about: "About Me",
     nav_services: "Services",
+    nav_hypnotherapy: "Hypnotherapy",
     nav_contact: "Contact",
     cta_schedule: "Schedule an Appointment",
     book_now: "Book Now",
@@ -219,6 +222,7 @@ const I18N = {
     nav_home: "Início",
     nav_about: "Sobre",
     nav_services: "Serviços",
+    nav_hypnotherapy: "Hipnoterapia",
     nav_contact: "Contato",
     cta_schedule: "Agendar Atendimento",
     book_now: "Agendar Agora",
@@ -236,6 +240,7 @@ const I18N = {
     nav_home: "Inicio",
     nav_about: "Sobre mí",
     nav_services: "Servicios",
+    nav_hypnotherapy: "Hipnoterapia",
     nav_contact: "Contacto",
     cta_schedule: "Reservar Cita",
     book_now: "Reservar Ahora",

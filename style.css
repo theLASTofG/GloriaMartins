@@ -806,29 +806,17 @@ h1, h2, h3, h4 {
   background: linear-gradient(135deg, var(--purple-dk) 0%, var(--purple) 100%);
   border-left: none;
   border-radius: 14px;
-  padding: 38px 44px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0 32px;
-  align-items: start;
+  padding: 36px 40px;
 }
 .approach-card--full .approach-card__tag {
   background: rgba(255,255,255,.18);
   color: rgba(255,255,255,.9);
-  grid-column: 1;
-  grid-row: 1;
-  align-self: start;
 }
 .approach-card--full .approach-card__title {
   color: #fff;
-  grid-column: 2;
-  grid-row: 1;
-  margin-top: 2px;
 }
 .approach-card--full .approach-card__desc {
   color: rgba(255,255,255,.78);
-  grid-column: 2;
-  grid-row: 2;
 }
 .approach-card__tag {
   display: inline-block;
@@ -861,10 +849,6 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 760px) {
   .approaches-grid { grid-template-columns: 1fr; }
-  .approach-card--full { grid-template-columns: 1fr; gap: 0; }
-  .approach-card--full .approach-card__title,
-  .approach-card--full .approach-card__desc { grid-column: 1; }
-  .approach-card--full .approach-card__desc { grid-row: 3; }
 }
 
 /* ---------- APPROACH CARD ICON ---------- */
@@ -879,12 +863,8 @@ h1, h2, h3, h4 {
 .approach-card--pink .approach-card__icon { color: var(--pink); }
 .approach-card--full .approach-card__icon {
   color: rgba(255,255,255,.85);
-  grid-column: 1;
-  grid-row: 1 / 3;
-  align-self: center;
   width: 32px;
   height: 32px;
-  margin-bottom: 0;
 }
 
 /* ---------- FAQ ---------- */
