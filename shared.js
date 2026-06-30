@@ -33,6 +33,7 @@ const PAGE_MAP = {
   'about.html': 'about',
   'services.html': 'services',
   'contact.html': 'contact',
+  'terms.html': 'terms',
 };
 const filename = location.pathname.split('/').pop() || 'index.html';
 const CURRENT_PAGE = PAGE_MAP[filename] || 'home';
@@ -61,7 +62,6 @@ const NAV_HTML = `
       <li><a href="index.html"    data-page="home" data-i18n="nav_home">Home</a></li>
       <li><a href="about.html"    data-page="about" data-i18n="nav_about">About Me</a></li>
       <li><a href="services.html" data-page="services" data-i18n="nav_services">Services</a></li>
-      <li><a href="services.html#hypnotherapy" data-i18n="nav_hypnotherapy">Hypnotherapy</a></li>
       <li><a href="contact.html"  data-page="contact" data-i18n="nav_contact">Contact</a></li>
     </ul>
     <a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer"
@@ -90,7 +90,6 @@ const NAV_HTML = `
   <a href="index.html"    data-page="home" data-i18n="nav_home">Home</a>
   <a href="about.html"    data-page="about" data-i18n="nav_about">About Me</a>
   <a href="services.html" data-page="services" data-i18n="nav_services">Services</a>
-  <a href="services.html#hypnotherapy" data-i18n="nav_hypnotherapy">Hypnotherapy</a>
   <a href="contact.html"  data-page="contact" data-i18n="nav_contact">Contact</a>
   <a href="${BOOK_URL}" target="_blank" rel="noopener noreferrer"
      class="btn btn--pink mobile-cta" style="margin-top:20px;text-align:center;" data-i18n="cta_schedule">
@@ -169,9 +168,20 @@ const FOOTER_HTML = `
       </div>
 
     </div>
-    <p class="footer__copyright">
-      &copy; <span id="footer-year"></span> Gloria Martins &mdash; Counselling &amp; Holistic Therapies &middot; North Brisbane, Australia
-    </p>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);margin-top:40px;padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <p class="footer__copyright" style="margin:0;">
+        &copy; <span id="footer-year"></span> Gloria Martins &mdash; Counselling &amp; Holistic Therapies &middot; North Brisbane, Australia
+      </p>
+      <a href="terms.html"
+         style="display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.2);padding:8px 18px;transition:all 0.25s;white-space:nowrap;"
+         onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,0.5)'"
+         onmouseout="this.style.color='rgba(255,255,255,0.6)';this.style.borderColor='rgba(255,255,255,0.2)'">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
+        </svg>
+        Terms &amp; Conditions
+      </a>
+    </div>
   </div>
 </footer>`;
 
