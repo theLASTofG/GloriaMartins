@@ -32,7 +32,7 @@ WhatsApp link padrão: `https://wa.me/61407266282?text=…`
 
 ## Analytics
 
-- **Google Analytics GA4** — ID `G-CHLKE9DNLF`
+- **Google Analytics GA4** — ID `G-S17HPNEFYG`
 - Snippet `gtag` inserido manualmente no `<head>` de **todas** as 4 páginas.
 - Não usa GTM. Ao adicionar novas páginas, copiar o bloco `<script>` do `<head>` do `index.html`.
 
@@ -129,7 +129,7 @@ sing-222-01.png
 
 | # | O que mudou | Arquivo(s) |
 |---|---|---|
-| 1 | Adicionado Google Analytics GA4 (`G-CHLKE9DNLF`) | Todas as 4 páginas |
+| 1 | Adicionado Google Analytics GA4 (ID corrigido para `G-S17HPNEFYG`; `G-CHLKE9DNLF` estava errado) | Todas as páginas |
 | 2 | Adicionado card "Clinical Hypnotherapy" em services.html | `services.html` |
 | 3 | Adicionado card "Clinical Hypnotherapy" na home (grid de serviços) | `index.html` |
 | 4 | **Removida tag "New"** (badge arco-íris) da home e de services — pedido da cliente | `index.html`, `services.html`, `style.css` |
