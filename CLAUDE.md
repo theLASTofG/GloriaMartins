@@ -8,7 +8,7 @@
 ## Stack & Arquitetura
 
 - **Puro HTML/CSS/JS** — sem framework, sem build step, sem bundler.
-- **4 páginas** independentes: `index.html`, `about.html`, `services.html`, `contact.html`.
+- **5 páginas** independentes: `index.html`, `about.html`, `services.html`, `contact.html`, `terms.html`.
 - **`style.css`** — folha de estilos única compartilhada por todas as páginas.
 - **`shared.js`** — injeta navbar e footer dinamicamente, gerencia highlight de rota ativa e configurações globais.
 - **`images/`** — 27 imagens; todas referenciadas no HTML/JS (sem thumbnails ou arquivos orfãos).
@@ -33,8 +33,9 @@ WhatsApp link padrão: `https://wa.me/61407266282?text=…`
 ## Analytics
 
 - **Google Analytics GA4** — ID `G-S17HPNEFYG`
-- Snippet `gtag` inserido manualmente no `<head>` de **todas** as 4 páginas.
-- Não usa GTM. Ao adicionar novas páginas, copiar o bloco `<script>` do `<head>` do `index.html`.
+- Snippet `gtag` inserido manualmente no `<head>` de **todas** as páginas.
+- **Google Tag Manager** — container `GTM-TG5LM7HS`, também instalado em todas as páginas (script no `<head>`, antes da tag GA4; `<noscript>` logo no início do `<body>`). Roda em paralelo com o `gtag` direto — intencional, confirmado com a cliente.
+- Ao adicionar novas páginas, copiar os dois blocos (GTM + `gtag`) do `<head>`/`<body>` do `index.html`.
 
 ---
 
